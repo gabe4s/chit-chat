@@ -8,6 +8,17 @@
 
 <body>
     <h1>Chit Chat</h1>
+    <input id="nameBox" type="text" placeholder="Name">
+    <input id="roomBox" type="text" placeholder="Room">
+    <button onclick="joinRoom()">Join Room</button>
 </body>
+
+<script>
+    function joinRoom() {
+        var name = document.getElementById("nameBox").value;
+        var room = document.getElementById("roomBox").value;
+        location.href = room;
+    }
+</script>
 
 </html>
