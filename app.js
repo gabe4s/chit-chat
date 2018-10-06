@@ -5,11 +5,9 @@ var path = require("path");
 var fs = require("fs");
 
 var CONFIG = JSON.parse(fs.readFileSync("config.json", "utf8"));
-
 var PORT = CONFIG.port;
 
 var app = express();
-
 var router = express.Router();
 
 app.use("/", router);
@@ -21,7 +19,7 @@ app.set("views", path.join(__dirname, "/views/"));
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 
 router.get("/", function(req, res) {
